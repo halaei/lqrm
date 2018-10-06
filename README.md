@@ -1,12 +1,16 @@
 # Laravel Queue Redis Module
 
-This is a Redis module that implements a laravel compatible queue driver for redis with the following features added to
-the original PHP-Lua driver:
+This is a Redis module that implements a laravel compatible queue driver for redis with the following improvements over
+the original Laravel 5.7 PHP-Lua driver:
 
-1. Blocking pop is now reliable.
+1. Blocking pop is now more reliable than before.
 2. Blocking pop now works on delayed and reserved jobs as well.
-3. Timer for delayed and reserved jobs is server side, with milliseconds precision.
-4. Laravel queue is now available for other programming languages as well.
+3. Timer for delayed and reserved jobs is server side, with milliseconds precision. This means
+you don't need to worry about syncing your php and redis servers, in case your projects are 
+distributed accross different servers. Moreover, this makes `retry_after` and `block_for`
+configurations independent of each other.
+4. Laravel queue can now be available for other programming languages and frameworks as well.
+Feel free to port it to your favorite ones.
 
 ## Commands
 
@@ -35,3 +39,11 @@ To always run redis server with the module, you can add the following to redis.c
     loadmodule </path/to/liblaravelq.so>
 
 After loading modules, laravel.* commands will be available.
+
+## Drivers
+
+To use this module with laravel, use `halaei/lqrm` composer package:
+
+    composer require halaei/lqrm
+
+Please note that this module is not language dependent. Other languages and frameworks can hopefully benefit from this module.
