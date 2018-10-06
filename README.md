@@ -14,11 +14,11 @@ Feel free to port it to your favorite ones.
 
 ## Commands
 
-1. laravel.push <queue-name> <job>
-2. laravel.later <queue-name>:delayed <delay-ms> <job>
-3. laravel.pop <queue-name> <queue-name>:delayed <queue-name>:reserved <reply-after-ms> <block-for-ms>
-4. laravel.delete <queue-name>:reserved <job>
-5. laravel.release <queue-name>:delayed <queue-name>:reserved <job> <delay-ms>
+1. laravel.push \<queue-name\> \<job\>
+2. laravel.later \<queue-name\>:delayed \<delay-ms\> \<job\>
+3. laravel.pop \<queue-name\> \<queue-name\>:delayed \<queue-name\>:reserved \<reply-after-ms\> \<block-for-ms\>
+4. laravel.delete \<queue-name\>:reserved \<job\>
+5. laravel.release \<queue-name\>:delayed \<queue-name\>:reserved \<job\> \<delay-ms\>
 
 ## Requirements
 1. Redis version 5.0 or higher.
