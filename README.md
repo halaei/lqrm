@@ -42,7 +42,7 @@ After loading modules, laravel.* commands will be available.
 
 ## Drivers
 
-To use this module with laravel, use `halaei/lqrm` composer package:
+To use this module with laravel, use [halaei/lqrm](https://github.com/halaei/lqrm-php) composer package:
 
     composer require halaei/lqrm
 
